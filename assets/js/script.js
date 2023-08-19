@@ -110,7 +110,7 @@ addEventOnElements(navTogglers , "click" , toggleNavbar)
 
   const slideNext = function (){
     if(currentSliderPos >= heroSliderItems.length - 1){
-      currentSliderPos = 0
+      currentSliderPos = 0;
     }else{
       currentSliderPos++;
     }
