@@ -50,11 +50,12 @@ addEventOnElements(navTogglers , "click" , toggleNavbar)
 
 
 /*
-   *Header
+   *Header & back to top btn
  */
 
 
   const header = document.querySelector("[data-header]")
+  const BackTopBtn = document.querySelector("[data-back-top-btn]")
   
   let lastScrollPos = 0
 
@@ -76,9 +77,11 @@ addEventOnElements(navTogglers , "click" , toggleNavbar)
   window.addEventListener('scroll' , function (){
     if(window.scrollY >= 50){
       header.classList.add("active")
+      BackTopBtn.classList.add("active")
       hideHeader()
     }else{
       header.classList.remove("active")
+      BackTopBtn.classList.remove("active")
     }
   })
 
@@ -181,3 +184,6 @@ addEventOnElements(navTogglers , "click" , toggleNavbar)
         parallaxItems[i].style.transform = `translate3d(${x}px , ${y}px , 0px)`
       }
   })
+
+
+
